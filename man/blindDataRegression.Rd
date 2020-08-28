@@ -39,7 +39,7 @@ blind a dataset that is intended for regression
 }
 \examples{
 blindDataRegression(
-df_original = data.frame(sickleave = 1:10, var1 = 100:110, var2 = 200:210),
+df_original = data.frame(sickleave = 0:10, var1 = 100:110, var2 = 200:210),
                          y = "sickleave",
                          blinding_method = "AverageWithNoisePerCase",
                          predictors = c("var1", "var2"))

@@ -10,25 +10,31 @@
 #' @keywords Average with noise per case, Regression
 #' @importFrom stats lm runif resid rbinom
 #'
-### Output:
-# df_sim_reg = n*5 dimensional data.frame with numeric variables in five colums:
-# - sickleave
-# - gender
-# - general_health
-# - stress_at_work
-# - var_of_work_ac
-#
-### Steps:
-# 1) define intercept
-# 2) define slopes
-# 3) simulate random indepdent variable values from binomial or from truncated
-#    normal distribution
-# 4) simulate error values random normal distribution
-# 5) simulate dependent variable scores according to linear model
-# 6) recode impossible values
-# 7) create dataset
+#' @export
+
 
 simulateDataRegression <- function(n = 85){
+
+
+  ### Output:
+  # df_sim_reg = n*5 dimensional data.frame with numeric variables in five colums:
+  # - sickleave
+  # - gender
+  # - general_health
+  # - stress_at_work
+  # - var_of_work_ac
+  #
+  ### Steps:
+  # 1) define intercept
+  # 2) define slopes
+  # 3) simulate random indepdent variable values from binomial or from truncated
+  #    normal distribution
+  # 4) simulate error values random normal distribution
+  # 5) simulate dependent variable scores according to linear model
+  # 6) recode impossible values
+  # 7) create dataset
+
+
   # Step1: define intercept
   b0 <- 12
 
